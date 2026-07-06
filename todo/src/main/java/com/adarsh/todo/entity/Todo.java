@@ -1,8 +1,5 @@
 package com.adarsh.todo.entity;
 
-import com.adarsh.todo.entity.Category;
-import com.adarsh.todo.entity.Priority;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
