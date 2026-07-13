@@ -1,4 +1,4 @@
-ppackage com.adarsh.todo.repository;
+package com.adarsh.todo.repository;
 
 import com.adarsh.todo.entity.TodoHistory;
 import org.springframework.data.jpa.repository.JpaRepository;

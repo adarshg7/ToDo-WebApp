@@ -2,7 +2,7 @@ package com.adarsh.todo.service;
 
 import com.adarsh.todo.dto.TodoDTO;
 import com.adarsh.todo.dto.TodoHistoryDTO;
-import com.adarsh.todo.dto.TodoStatsDTO;;
+import com.adarsh.todo.dto.TodoStatsDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

@@ -1,5 +1,6 @@
 package com.adarsh.todo.repository;
 
+import com.adarsh.todo.entity.Priority;
 import com.adarsh.todo.entity.Todo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,7 +24,7 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
     Page<Todo> findByCompletedAndCreatedBy(Boolean completed, String createdBy, Pageable pageable);
     
     @Query("SELECT t FROM Todo t WHERE t.createdBy = :createdBy AND t.priority = :priority ORDER BY t.dueDate ASC")
-    List<Todo> findByPriorityAndUser(@Param("createdBy") String createdBy, @Param("priority") String priority);
+    List<Todo> findByPriorityAndUser(@Param("createdBy") String createdBy, @Param("priority") Priority priority);
     
     @Query("SELECT t FROM Todo t WHERE t.createdBy = :createdBy AND t.dueDate BETWEEN :startDate AND :endDate")
     List<Todo> findByDateRange(@Param("createdBy") String createdBy, @Param("startDate") LocalDateTime startDate, @Param("endDate") LocalDateTime endDate);
